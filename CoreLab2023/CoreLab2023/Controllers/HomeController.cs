@@ -23,18 +23,19 @@ namespace CoreLab2023.Controllers
 		{
 			
 			TestTableRepository dataRep = new TestTableRepository();
-			
+			/*
 			TestTableModel newItem = new TestTableModel();
 			newItem.id = 999;
 			newItem.testType = "xxx";
 			newItem.testValue = 9999999;
 			List<TestTableModel> insertList = new List<TestTableModel> { newItem };	
 			dataRep.InsertItems(insertList);
+			*/
 
-
-            TestTableModels x = new TestTableModels();
-			x.Models = dataRep.GetValue();
-			return View(x);
+			// 頁面呈現全部項目
+            TestTableModels rep = new TestTableModels();
+            rep.Models = dataRep.GetAllItems();
+			return View(rep);
 		}
 
 		public IActionResult Privacy()

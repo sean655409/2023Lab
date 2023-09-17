@@ -1,6 +1,9 @@
 ﻿
 namespace CoreLab2023.Models
 {
+    /// <summary>
+    /// 項目Model
+    /// </summary>
     public class TestTableModel 
     {
         public int id { get; set; }
