@@ -11,6 +11,10 @@ namespace CoreLab2023.API
     public class TestTableController : ControllerBase
     {
         // GET: api/<TestTableController>
+        /// <summary>
+        /// 取得全部項目
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -31,6 +35,11 @@ namespace CoreLab2023.API
         }
 
         // GET api/<TestTableController>/5
+        /// <summary>
+        /// 取得特定項目
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -56,6 +65,11 @@ namespace CoreLab2023.API
         }
 
         // POST api/TestTable
+        /// <summary>
+        /// 新增項目
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(TestTableModel req)
         {
@@ -72,6 +86,11 @@ namespace CoreLab2023.API
         }
 
         // PUT api/TestTable
+        /// <summary>
+        /// 更新項目
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(TestTableModel req)
         {
@@ -91,6 +110,11 @@ namespace CoreLab2023.API
         
 
         // DELETE api/TestTable
+        /// <summary>
+        /// 刪除項目
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Delete(TestTableModel req)
         {
